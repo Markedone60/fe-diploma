@@ -1,0 +1,343 @@
+.header-order {
+  background-image: url(../../../images/order-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
+
+.search-order {
+  background: rgba(41, 41, 41, .8);
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+
+.search-form-order {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.search-form-order-input {
+  display: inline-flex
+}
+
+.search-form-order-text {
+  color: #ffffff;
+  font-size: 1.3em;
+  font-weight: 300;
+  margin-bottom: 8px;
+  margin-left: 15px;
+  margin-top: 45px;
+}
+
+.search-input-order {
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: 400;
+  height: 40px;
+  padding-left: 20px;
+  width: 200px;
+}
+
+.direction-from,
+.direction-to {
+  background: #ffffff url(../../../images/search-direction.png) no-repeat right 10px center;
+}
+
+.direction-from {
+  margin-left: 10px;
+}
+
+.time {
+  background: #ffffff url(../../../images/search-date.png) no-repeat right 10px center;
+}
+
+.time-from {
+  margin-right: 32px;
+  margin-left: 10px;
+}
+
+.search-input-order-arrow {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.search-button-order {
+  background: #ffa800;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 40px;
+  margin-left: 884px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  width: 220px;
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.progress {
+  background: #3e3c41;
+}
+
+.progress-list {
+  align-items: stretch;
+  display: flex;
+  height: 98px;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  padding-left: 150px;
+}
+
+.progress-item {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  flex-grow: 1;
+  font-size: 1.3em;
+  font-weight: 700;
+  position: relative;
+  text-align: start;
+  width: 355px;
+}
+
+.progress-item:not(:first-child)::after {
+  height: 98px;
+  width: 38px;
+  content: '';
+  position: absolute;
+  background-image: url(../../../images/order-progress.png);
+  left: -50px;
+}
+
+.progress-item-number {
+  align-items: center;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  margin-right: 28px;
+  padding: 10px;
+  position: relative;
+  width: 56px;
+}
+
+
+.order-container {
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1500px;
+  padding-top: 95px;
+}
+
+
+
+
+.train {
+  color: #928f94;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 250px;
+}
+
+.train-header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 47px;
+}
+
+.train-header-found {
+  margin-right: 50px;
+}
+
+
+.train-header-sort,
+.train-header-list,
+.train-header-list-options {
+  align-items: flex-end;
+  display: flex;
+  margin: 0;
+  padding-left: 2px;
+}
+
+.train-header-sort-select {
+  color: #292929;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  width: 160px;
+}
+
+.train-header-list-options-item {
+  cursor: pointer;
+  list-style-type: none;
+  margin-left: 10px;
+}
+
+
+.train-container-card {
+  background-color: #fff;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+  display: flex;
+  margin-bottom: 50px;
+  min-height: 250px;
+  min-width: 950px;
+}
+
+.train-container-card-logo {
+  align-items: center;
+  background-color: #e4e0e9;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 18px 24px;
+  width: 20%;
+}
+
+.train-container-card-logo-img {
+  margin-bottom: 17px;
+  margin-top: 15%;
+}
+
+.train-container-card-logo-body {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.train-container-card-logo-body-header {
+  align-self: center;
+  color: #3e3c41;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.train-container-card-logo-body-direction {
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+
+.train-container-card-body {
+  padding: 54px 39px;
+  width: 50%;
+}
+
+.train-container-card-body-section {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.train-container-card-body-direction-time {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 0;
+}
+
+.train-container-card-body-direction-place {
+  color: #928f94;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  margin: 0 0 20px;
+  text-transform: capitalize;
+}
+
+.train-container-card-body-between-time {
+  color: #c4c4c4;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0 30px 10px 0;
+}
+
+.train-container-card-places {
+  align-items: flex-end;
+  border-left: 1px dashed #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 22px 24px;
+  width: 30%;
+}
+
+.train-container-card-places-list-item {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
+
+.train-container-card-places-list-item-type {
+  color: #3e3c41;
+  font-size: 16px;
+  line-height: 19px;
+  width: 74px;
+}
+
+.train-container-card-places-list-item-quantity {
+  color: #ffa800;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.train-container-card-places-list-item-price {
+  color: #928f94;
+  font-size: 16px;
+  line-height: 19px;
+  margin-left: 10px;
+  padding-right: 5px;
+  display: flex;
+  align-items: baseline;
+}
+
+.train-container-card-places-list-item-price-span2 {
+  background-size: 16px 19px;
+  color: #2d2b2f;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-left: 4px;
+  padding-right: 4px;
+}
+
+.train-container-card-places-list-item-price-img {
+  height: 19px;
+  width: 16px;
+}
+
+.train-container-card-places-button {
+  background: #ffa800;
+  border: 1px solid #ffa800;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  padding: 6px 20px;
+  text-align: center;
+}
+
