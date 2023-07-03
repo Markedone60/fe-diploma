@@ -41,6 +41,16 @@
   padding: 0 33px;
 }
 
+.back-button:hover {
+  color: #ffa800;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.back-button:active {
+  background: #ffa800;
+  color: #292929;
+}
+
 .seat-info {
   display: flex;
   align-items: center;
@@ -165,7 +175,7 @@
   margin-top: 18px;
 }
 
-.seat-numbers {
+.numbers-header {
   align-items: center;
   background: rgba(255, 168, 0, .44);
   display: flex;
@@ -173,7 +183,7 @@
   margin: 0;
 }
 
-.numbers-seats {
+.numbers-header-seats {
   align-items: center;
   color: #2d2b2f;
   display: flex;
@@ -182,11 +192,11 @@
   list-style-type: none;
 }
 
-.numbers-seats-text {
+.numbers-header-seats-text {
   margin-left: 20px;
 }
 
-.numbers-seats-num {
+.numbers-header-seats-num {
   color: #292929;
   cursor: pointer;
   font-size: 24px;
@@ -195,12 +205,120 @@
   margin-left: 7px;
 }
 
-.numbers-text {
+.numbers-header-text {
   color: #292929;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
   margin: 0 20px 0 auto;
+}
+
+
+.class-header {
+  display: flex;
+}
+
+.class-header-vagon {
+  background: #ffd98f;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 161px;
+  justify-content: center;
+  padding-left: 30px;
+  width: 190px;
+}
+
+.vagon-number {
+  color: #292929;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 84px;
+  margin: 0;
+}
+
+.vagon-text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.seats-available{
+  color: #928f94;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 0;
+}
+
+.seats-available-text {
+  color: #000;
+}
+
+.coach-info-header {
+  background: #ffd98f;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 161px;
+  justify-content: center;
+  padding-left: 30px;
+  width: 190px;
+}
+
+.seats-available {
+  color: #928f94;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 0;
+}
+
+.seats-available-text {
+  color: #000;
+}
+
+.class-header-seats {
+  padding-left: 85px;
+}
+
+.seats-places {
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 0;
+}
+
+.number, .seats-places-sum {
+  font-weight: bold;
+}
+
+
+.class-header-prices {
+  padding-left: 85px;
+}
+
+.seats-places-img {
+  height: 17px;
+  margin-left: 10px;
+}
+
+.class-header-options {
+  padding-left: 100px;
+}
+
+.class-body-prompt {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  color: #292929;
+  font-size: 16px;
+  line-height: 19px;
+  margin-left: auto;
+  margin-right: 42px;
+  padding: 16px;
+  width: 199px;
 }
 
 .seat-buttons {
@@ -227,4 +345,15 @@
   height: 60px;
   padding: 0 70px;
   text-transform: uppercase;
+}
+
+.seat-button:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.seat-button:active {
+  color: #ffa800;
+  border: 1px solid #ffa800;
+  background-color: #e5e5e5;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }

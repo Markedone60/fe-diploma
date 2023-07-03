@@ -110,6 +110,18 @@
   text-transform: uppercase;
 }
 
+.signup-form-button:hover {
+  border-color: transparent;
+  background: #ffca62;
+  color: #2d2b2f;
+}
+
+.signup-form-button:active {
+  border-color: transparent;
+  background-color: #ffffff;
+  color: #2d2b2f;
+}
+
 
 
 .footer-line {

@@ -94,11 +94,13 @@ export default function Seats() {
           </ul>
         </div>
         <div className="seat-numbers">
-          <div className="numbers-seats">
-            <p className="numbers-seats-text">Вагоны</p>
-            <p className="numbers-seats-num">N</p>
+          <div className="numbers-header">
+            <div className="numbers-header-seats">
+              <p className="numbers-header-seats-text">Вагоны</p>
+              <p className="numbers-header-seats-num">N</p>
+            </div>
+            <p className="numbers-header-text">Нумерация вагонов начинается с головы поезда</p>
           </div>
-          <p className="numbers-text">Нумерация вагонов начинается с головы поезда</p>
         </div>
       </section>
 
@@ -188,13 +190,63 @@ export default function Seats() {
             </li>
           </ul>
         </div>
+
+
+
         <div className="seat-numbers">
-          <div className="numbers-seats">
-            <p className="numbers-seats-text">Вагоны</p>
-            <p className="numbers-seats-num">N</p>
+          <div className="numbers-header">
+            <div className="numbers-header-seats">
+              <p className="numbers-header-seats-text">Вагоны</p>
+              <p className="numbers-header-seats-num">N</p>
+            </div>
+            <p className="numbers-header-text">Нумерация вагонов начинается с головы поезда</p>
           </div>
-          <p className="numbers-text">Нумерация вагонов начинается с головы поезда</p>
+          <section className="class">
+            <div className="class-header">
+              <div className="class-header-vagon">
+                <h1 className="vagon-number">N</h1>
+                <p className="vagon-text">вагон</p>
+              </div>
+              <div className="class-header-seats">
+                <h4 className="seats-available">Места
+                  <span className="seats-available-text"> N</span>
+                </h4>
+                <p className="seats-places seats-upper">Верхние <span className="seats-places number">10</span></p>
+                <p className="seats-places seats-lower">Нижние <span className="seats-places number">5</span></p>
+                <p className="seats-places seats-side">Боковые <span className="seats-places number">2</span></p>
+              </div>
+              <div className="class-header-prices">
+                <h4 className="seats-available">Стоимость</h4>
+                <p className="seats-places seats-upper">
+                  <span className="seats-places-sum">SUM</span>
+                  <img className="seats-places-img" src={require('../../../../images/seats/seats11.png')} alt="pic"/>
+                </p>
+                <p className="seats-places seats-upper">
+                  <span className="seats-places-sum">SUM</span>
+                  <img className="seats-places-img" src={require('../../../../images/seats/seats11.png')} alt="pic"/>
+                </p>
+                <p className="seats-places seats-upper">
+                  <span className="seats-places-sum">SUM</span>
+                  <img className="seats-places-img" src={require('../../../../images/seats/seats11.png')} alt="pic"/>
+                </p>
+              </div>
+              <div className="class-header-options">
+                <h4 className="seats-available">Обслуживание ФПК</h4>
+                <div className="options-logos">
+                  logo
+                </div>
+              </div>
+            </div>
+            <div className="class-body">
+              <div className="class-body-prompt">0 человек выбирают места в этом поезде</div>
+              <div className="class-body-scheme">
+                Scheme
+              </div>
+            </div>
+          </section>
         </div>
+
+
       </section>
       <div className="seat-buttons">
         <button className="seat-button">Далее</button>
