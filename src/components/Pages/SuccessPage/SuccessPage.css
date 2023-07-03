@@ -1,0 +1,140 @@
+.successpage-header {
+  background-image: url(../../../images/success_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+  height: 834px;
+}
+
+.successpage-header-title {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 84px;
+  color: #FFFFFF;
+  margin-left: calc(50% - 702px);
+  margin-top: 350px;
+}
+
+.successform-wraper {
+  position: relative;
+  height: 1080px;
+}
+
+.successform {
+  width: 1404px;
+  border: 1px solid #C4C4C4;
+  margin-bottom: 100px;
+  left: calc(50% - 702px);
+  box-sizing: border-box;
+  position: absolute;
+  top: -208px;
+}
+
+
+.successform-header {
+  display: flex;
+  background-color: #FFFFFF;
+}
+
+.successform-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.successform-header-order {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  margin-left: 30px;
+}
+
+.successform-header-sum {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.sum-text {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 42px;
+  color: #928F94;
+  padding-right: 30px;
+}
+
+.sum-numbers-text {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  color: #3E3C41;
+  padding-right: 30px;
+}
+
+.successform-tips {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #F4F3F6;
+  align-items: baseline;
+  padding: 5% 15% 5% 15%;
+}
+
+.tips-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tips-item-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+  width: 50%;
+}
+
+.successform-text {
+  margin: 10% 15%;
+}
+
+.successform-text-name {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.successform-text-text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.successform-text-text:last-child {
+  font-weight: 700;
+  padding-top: 30px;
+}
+
+
+.successform-footer {
+  background-color: #FFA800;
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 10% 5% 10%;
+  align-items: center;
+}
+
+.successform-footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.successform-footer-left-text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  padding-right: 15px;
+}
+
+.successform-button {
+
+}

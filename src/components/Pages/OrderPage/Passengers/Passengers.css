@@ -1,0 +1,273 @@
+
+
+.passenger {
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  margin-bottom: 30px;
+}
+
+.passenger-head {
+  background: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.head-left {
+  display: flex;
+}
+
+.head-title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  color: #292929;
+}
+
+.head-toggle {
+  border: none;
+  margin-left: 15px;
+  padding-right: 15px;
+  background-color: inherit;
+}
+
+.passenger-body {
+  border-bottom: 1px dashed #928f94;
+  padding-bottom: 30px;
+}
+
+.head-delete {
+  margin-right: 15px;
+  border: none;
+  background-color: inherit;
+}
+
+.body-form {
+  padding-left: 30px;
+  border-top: 1px dashed #928f94;
+}
+
+.passenger-titles {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #928F94;
+  margin-bottom: 0;
+}
+
+.body-form-select {
+  box-sizing: border-box;
+  height: 50px;
+  width: 280px;
+  border: 1px solid #928f94;
+  border-radius: 5px;
+  color: #292929;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  padding-left: 13px;
+  outline: none;
+  margin-top: 16px;
+}
+
+.body-names {
+  border-top: none;
+  display: flex;
+  margin-top: 45px;
+}
+
+.names-label-input {
+  height: 50px;
+  width: 280px;
+  border: 1px solid #928f94;
+  border-radius: 5px;
+}
+
+.input-birth {
+  width: 220px;
+}
+
+.body-inputs {
+  display: flex;
+  padding-top: 30px;
+}
+
+.inputs-sex {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  padding-right: 30px;
+}
+
+.names-label {
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.controls-lable {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100px;
+  padding: 9px 0 8px 0;
+  border: 1px solid #928f94;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+}
+
+.controls-radio {
+  display: none;
+}
+
+.male {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.female {
+  margin-left: -1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.controls-radio:checked+.controls-lable {
+  background-color: #ffa800;
+}
+
+
+.body-check {
+  display: flex;
+  border-bottom: 1px dashed #928f94;
+  padding-bottom: 10px;
+}
+
+.body-check-input {
+  margin-left: 30px;
+}
+
+
+
+
+.document {
+  display: flex;
+  padding-top: 30px;
+}
+
+.document-label {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.document-type-select, .document-input {
+  height: 50px;
+  width: 200px;
+  border: 1px solid #928f94;
+  border-radius: 5px;
+}
+
+
+
+.passenger-foot {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 126px;
+  margin-right: 30px;
+}
+
+.foot-button {
+  background-color: inherit;
+  padding: 12px 24px;
+  border: 1px solid #292929;
+  border-radius: 5px;
+  color: #292929;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.foot-button:hover {
+  background-color: #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #ffa800;
+}
+
+.foot-button:active {
+  background-color: #ffa800;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #292929;
+}
+
+
+.passengers-new {
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  margin-bottom: 30px;
+}
+
+.passengers-new-title {
+  margin-left: 30px;
+}
+
+.passengers-new-button {
+  border: none;
+  background-color: inherit;
+  margin-right: 30px;
+}
+
+
+.passengers {
+  width: 80%;
+  margin-left: 90px;
+  position: relative;
+}
+
+.passengers-nextpage {
+  height: 183px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 140px;
+}
+
+.nextpage-button {
+  margin-left: auto;
+  margin-top: 100px;
+  height: 60px;
+  padding: 0 70px 0 70px;
+
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background: #ffa800;
+  border-radius: 5px;
+  border: none;
+  position: absolute;
+  right: 0;
+}
+
+.nextpage-button:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nextpage-button:active {
+  color: #ffa800;
+  border: 1px solid #ffa800;
+  background-color: #e5e5e5;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
