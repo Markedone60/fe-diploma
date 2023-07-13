@@ -1,17 +1,17 @@
 import React from "react";
 import './Inputs/Inputs.css';
-//import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 import DirectionInputs from "./Inputs/DirectionInputs";
 
 export default function Search() {
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  /*const onSubmit = (event) => {
-   event.preventDefault();
-     navigate('/order/tickets/train');
-     document.documentElement.scrollTop = 0;
-   }
-   */
+  const onSubmit = (event) => {
+    event.preventDefault();
+    navigate('/order/tickets/train');
+    document.documentElement.scrollTop = 0;
+  }
+
 
   return (
     <form className="search">
@@ -25,7 +25,7 @@ export default function Search() {
       <button
         className="search-button"
         type="button"
-      //    onClick={onSubmit}
+        onClick={onSubmit}
       >
         <div className="search-button-text">найти билеты</div>
       </button>
