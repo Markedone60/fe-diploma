@@ -41,12 +41,12 @@
   width: 200px;
 }
 
-.direction-from,
-.direction-to {
+.direction-from-order,
+.direction-to-order {
   background: #ffffff url(../../../images/search-direction.png) no-repeat right 10px center;
 }
 
-.direction-from {
+.direction-from-order {
   margin-left: 10px;
 }
 

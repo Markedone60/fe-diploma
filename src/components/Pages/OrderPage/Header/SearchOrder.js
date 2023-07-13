@@ -8,11 +8,11 @@ export default function SearchOrder() {
         <div className="search-form-order-container">
           <div className="search-form-order-text">Направление</div>
           <div className="search-form-order-input">
-            <input className="search-input-order direction-from" placeholder="Откуда" />
+            <input className="search-input-order direction-from-order" placeholder="Откуда" />
             <span>
               <img className="search-input-order-arrow" src={require('../../../../images/search-arrow.png')} alt="pic" />
             </span>
-            <input className="search-input-order direction-to" placeholder="Куда" />
+            <input className="search-input-order direction-to-order" placeholder="Куда" />
           </div>
         </div>
         <div className="search-form-order-container">
