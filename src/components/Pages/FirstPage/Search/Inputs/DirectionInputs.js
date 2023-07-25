@@ -14,7 +14,7 @@ export default function DirectionInputs() {
 
   return (
     <div className="direction-form">
-      <Direction placeholder="Откуда" direction="routeFrom" />
+      <Direction place="Откуда" direction="routeFrom" />
       <span>
         <img 
           className="search-input-arrow" 
@@ -23,7 +23,7 @@ export default function DirectionInputs() {
           onClick={handleChange} 
         />
       </span>
-      <Direction placeholder="Куда" direction="routeIn" />
+      <Direction place="Куда" direction="routeIn" />
     </div >
   )
 }

@@ -11,16 +11,18 @@ export default function Direction({ place, direction }) {
   const [visible, setVisible] = useState(false);
   const [value, setValue] = useState('');
   const { routeFrom, routeIn } = useSelector((state) => state.search);
-  
+
   const route = direction === 'routeFrom' ? routeFrom.city : routeIn.city;
-  const [cities, setCities] = useState(route);
+  const [cities, setCities] = useState([route]);
 
   useEffect(() => {
     setValue(route);
-    fetch(`https://netology-trainbooking.netoservices.ru/routes/cities?name=${route}`)
+    fetch(
+      `${process.env.REACT_APP_URL}routes/cities?name=${route}`
+    )
       .then((response) => response.json())
       .then((data) => setCities(data));
-  }, [route]);
+  }, [route])
 
   const dispatch = useDispatch();
 
@@ -61,7 +63,7 @@ export default function Direction({ place, direction }) {
       />
       {visible && (
         <div className="direction-list">
-          {cities.length > 0 ? (
+          {
             cities.map((city) => (
               <p
                 className="direction-item"
@@ -73,9 +75,7 @@ export default function Direction({ place, direction }) {
                 {city.name}
               </p>
             ))
-          ) : (
-            <p className="direction-item">Направление не найдено</p>
-          )}
+          }
         </div>
       )}
     </div>

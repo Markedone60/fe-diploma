@@ -3,8 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   date_start: null,
   date_end: null,
-  routeFrom: "Москва",
-  routeIn: "Санкт-Петербург"
+  routeFrom: {
+    id: '63329d7b591d1e00467e8a30',
+    city: 'Москва',
+  },
+  routeIn: {
+    id: '63329d7b591d1e00467e8a31',
+    city: 'Санкт-петербург',
+  },
 }
 
 const searchSlice = createSlice({
@@ -12,7 +18,7 @@ const searchSlice = createSlice({
   initialState,
   reducers: {
     searchChange: (state, action) => {
-      const {name, value} = action.payload;
+      const { name, value } = action.payload;
       state[name] = value;
     },
     cityRotate: (state) => {
@@ -23,5 +29,5 @@ const searchSlice = createSlice({
   }
 })
 
-export const {searchChange, cityRotate} = searchSlice.actions;
+export const { searchChange, cityRotate } = searchSlice.actions;
 export default searchSlice.reducer;
