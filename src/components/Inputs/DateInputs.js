@@ -2,7 +2,7 @@ import React from "react";
 import ReactDatePicker from "react-datepicker";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { searchChange } from "../../../../../slices/searchSlice";
+import { searchChange } from "../../slices/searchSlice";
 import './Inputs.css';
 import 'react-datepicker/dist/react-datepicker.css';
 

@@ -30,11 +30,11 @@
 }
 
 .direction-from, .direction-to {
-  background: #ffffff url(../../../../../images/search-direction.png) no-repeat right 10px center;
+  background: #ffffff url(../../images/search-direction.png) no-repeat right 10px center;
 }
 
 .time {
-  background: #ffffff url(../../../../../images/search-date.png) no-repeat right 10px center;
+  background: #ffffff url(../../images/search-date.png) no-repeat right 10px center;
 }
 
 .time-from {

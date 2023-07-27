@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import PropTypes from "prop-types";
 
 import './Inputs.css';
-import { searchChange } from "../../../../../slices/searchSlice";
+import { searchChange } from "../../slices/searchSlice";
 
 export default function Direction({ place, direction }) {
 
@@ -42,9 +42,7 @@ export default function Direction({ place, direction }) {
   const onFieldChange = (e) => {
     const { target } = e;
     setValue(target.value);
-    const cityObj =
-      cities &&
-      cities.find((city) => city.name === target.value.toLowerCase());
+    const cityObj = cities && cities.find((city) => city.name === target.value.toLowerCase());
     const id = cityObj ? cityObj._id : '';
     onChangeDispatch(id, target.value);
   };

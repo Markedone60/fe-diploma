@@ -1,19 +1,19 @@
 import React from "react";
-import './Inputs/Inputs.css';
-//import { useNavigate } from 'react-router';
+import '../../../Inputs/Inputs.css'
+import { useNavigate } from 'react-router';
 import { useDispatch } from "react-redux";
-import DirectionInputs from "./Inputs/DirectionInputs";
-import DateInputs from "./Inputs/DateInputs";
+import DirectionInputs from "../../../Inputs/DirectionInputs"
+import DateInputs from "../../../Inputs/DateInputs"
 import { fetchRoutes } from "../../../../slices/routeSlice";
 
 export default function Search() {
-//  const navigate = useNavigate();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const onSubmit = (event) => {
     event.preventDefault();
     dispatch(fetchRoutes());
-  //  navigate('/order/tickets/train');
+    navigate('/order/tickets/train');
     document.documentElement.scrollTop = 0;
   }
 
