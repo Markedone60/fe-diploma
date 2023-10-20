@@ -72,3 +72,26 @@
   background-color: transparent;
   color: #ffa800;
 }
+
+.direction-list {
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+  top: 50px;
+  padding: 15px 20px 10px 20px;
+  border-radius: 2px;
+  background-color: #f5f4f6;
+}
+
+.direction-item {
+  font-size: 0.8em;
+  line-height: 21px;
+  font-variant: small-caps;
+  font-weight: 400;
+  cursor: pointer;
+  color: #292929;
+}
+
+.direction-input {
+  position: relative;
+}

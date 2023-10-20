@@ -57,7 +57,7 @@ export default function DateInputs() {
       <span className='search-form-input' />
       <ReactDatePicker
         placeholderText='ДД/ММ/ГГ'
-        dateFormat="dd/mm/yy"
+        dateFormat="dd/MM/yy"
         selected={end}
         minDate={start}
         selectsEnd

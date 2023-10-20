@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
 import FirstPage from './components/Pages/FirstPage/FirstPage';
@@ -8,14 +8,12 @@ import SuccessPage from './components/Pages/SuccessPage/SuccessPage';
 
 function App() {
   return (
-    <Router className="App" basename={window.location.pathname || ''}>
-      <Routes>
-        <Route path='/' Component={FirstPage}/>
-        <Route path='/order/*' Component={OrderPage}/>
-        <Route path='/success/*' Component={SuccessPage}/>
-      </Routes>
-    </Router>
-  );
+    <Routes>
+      <Route path='/' Component={FirstPage} />
+      <Route path='/order/*' Component={OrderPage} />
+      <Route path='/success/*' Component={SuccessPage} />
+    </Routes>
+  )
 }
 
 export default App;

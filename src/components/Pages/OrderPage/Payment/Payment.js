@@ -1,7 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { stageChange } from "../../../../slices/stageSlice";
+import { addPayerData } from "../../../../slices/paySlice";
 import "../OrderPage.css";
 
+
 export default function Payment() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [form, setForm] = useState({
+    surname: '',
+    name: '',
+    lastname: '',
+    phone: '',
+    email: '',
+    pay: '',
+  })
+
+  const [disabled, setDisabled] = useState(true);
+
+  useEffect(() => {
+    dispatch(stageChange({ stage: 3 }));
+  }, [dispatch])
+
+  useEffect(() => {
+    setDisabled(true);
+    if (
+      !(
+        form.surname &&
+        form.name &&
+        form.lastname &&
+        form.phone &&
+        form.email &&
+        form.pay
+      )
+    )
+      return;
+    setDisabled(false);
+  }, [form]);
+
+  const handleChange = (event) => {
+    const {name, value} = event.target;
+    setForm((prev) => ({...prev, pay: event.target.id}));
+  }
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    dispatch(addPayerData({data: form}));
+    navigate('/order/verification/');
+    document.documentElement.scrollTop = 0;
+  }
+
   return (
     <div className="payment-section">
       <section className="payment">
@@ -76,7 +127,7 @@ export default function Payment() {
           </div>
 
           <div className="payment-online-options">
-            <h3 className="payment-online-option">Банковской <br/> картой</h3>
+            <h3 className="payment-online-option">Банковской <br /> картой</h3>
             <h3 className="payment-online-option">PayPal</h3>
             <h3 className="payment-online-option">Visa QIWI Wallet</h3>
           </div>

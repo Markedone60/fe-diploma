@@ -10,6 +10,7 @@ export default function Direction({ place, direction }) {
 
   const [visible, setVisible] = useState(false);
   const [value, setValue] = useState('');
+  const dispatch = useDispatch();
   const { routeFrom, routeIn } = useSelector((state) => state.search);
 
   const route = direction === 'routeFrom' ? routeFrom.city : routeIn.city;
@@ -17,14 +18,21 @@ export default function Direction({ place, direction }) {
 
   useEffect(() => {
     setValue(route);
-    fetch(
-      `${process.env.REACT_APP_URL}routes/cities?name=${route}`
-    )
+    const controller = new AbortController();
+    fetch(`https://students.netoservices.ru/fe-diplom/routes/cities?name=${route || 'А'}`, {
+      signal: controller.signal,
+    })
       .then((response) => response.json())
-      .then((data) => setCities(data));
-  }, [route])
+      .then((data) => {
+        setCities(data);
+        return () => controller.abort();
+      });
+  }, [route]);
 
-  const dispatch = useDispatch();
+  const onBlur = (event) => {
+    event.preventDefault();
+    setTimeout(() => setVisible(false), 1000);
+  };
 
   const onChangeDispatch = (id, city) => {
     setValue(city);
@@ -56,12 +64,16 @@ export default function Direction({ place, direction }) {
         placeholder={place || ''}
         onClick={() => setVisible(true)}
         onChange={onFieldChange}
+        onBlur={onBlur}
         name={direction}
         value={value}
       />
+
       {visible && (
         <div className="direction-list">
-          {
+      
+
+          {cities.length > 0 ? (
             cities.map((city) => (
               <p
                 className="direction-item"
@@ -73,7 +85,9 @@ export default function Direction({ place, direction }) {
                 {city.name}
               </p>
             ))
-          }
+          ) : (
+            <p className="direction-item">Направление не найдено</p>
+          )}
         </div>
       )}
     </div>

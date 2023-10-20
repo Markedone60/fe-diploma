@@ -1,13 +1,13 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const fetchRoutes = createAsyncThunk(
-  'routes/fetchRoutes',
+  'fetchRoutes',
   async (_, { rejectWithValue, getState }) => {
     const { filter } = getState();
     const from_city_id = getState().search.routeFrom.id;
     const to_city_id = getState().search.routeIn.id;
 
-    let url = `${process.env.REACT_APP_URL}routes?from_city_id=${from_city_id}&to_city_id=${to_city_id}`;
+    let url = `https://students.netoservices.ru/fe-diplom/routes?from_city_id=${from_city_id}&to_city_id=${to_city_id}`;
     const { date_start, date_end } = getState().search;
 
     if (date_start) {
@@ -75,5 +75,5 @@ const routeSlice = createSlice({
   },
 });
 
-export const { routesPush, routesClear, trainAdd, trainClear } = routeSlice.actions;
+export const { routesPush, routesClear } = routeSlice.actions;
 export default routeSlice.reducer;

@@ -1,9 +1,9 @@
 import React from "react";
-import '../../../Inputs/Inputs.css'
-import { useNavigate } from 'react-router';
+import '../../../SearchInputs/Inputs.css'
+ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
-import DirectionInputs from "../../../Inputs/DirectionInputs"
-import DateInputs from "../../../Inputs/DateInputs"
+import DirectionInputs from "../../../SearchInputs/DirectionInputs"
+import DateInputs from "../../../SearchInputs/DateInputs"
 import { fetchRoutes } from "../../../../slices/routeSlice";
 
 export default function Search() {
@@ -16,6 +16,7 @@ export default function Search() {
     navigate('/order/tickets/train');
     document.documentElement.scrollTop = 0;
   }
+
 
   return (
     <div className="search">
@@ -38,13 +39,3 @@ export default function Search() {
 
   )
 }
-
-
-/*
-<div>
-  <div className="search-text">Дата</div>
-  <input className="search-input time time-from" placeholder="ДД/ММ/ГГГГ" />
-  <input className="search-input time time-to" placeholder="ДД/ММ/ГГГГ" />
-</div>
-
-*/

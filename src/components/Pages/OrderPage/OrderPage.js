@@ -16,12 +16,12 @@ export default function OrderPage() {
       <HeaderOrderPage />
       <div className="order-container">
 
-        <Sidebar/>
+        <Sidebar />
 
         <Routes>
           <Route path="/tickets/train" Component={TrainSelection} />
           <Route path="/tickets/seats" Component={Seats} />
-          <Route path="/passenger/" Component={Passengers} />
+          <Route path="/passengers/" Component={Passengers} />
           <Route path="/payment/" Component={Payment} />
           <Route path="/verification/" Component={Verification} />
         </Routes>

@@ -1,22 +1,28 @@
 import React from "react";
-import Dates from "./Dates";
-import Options from "./Options";
+import { useSelector } from "react-redux";
 import './Sidebar.css';
-import Prices from "./Prices";
-import Time from "./Time";
-import LastTickets from "./LastTickets";
+import LastTickets from "./LastTickets/LastTickets";
+import SidebarWithSelectors from "./SidebarWithSelectors/SidebarWithSelectors";
+import SidebarCompleted from "./SidebarCompleted/SidebarCompleted";
 
 export default function Sidebar() {
+  const { stage } = useSelector((state) => state.stage);
+  
   return (
-    <aside className="sidebar">
-      <section className="sidebar-options-container">
-        <Dates />
-        <Options />
-        <Prices />
-        <Time />
+    <aside className="sidebar-aside">
+      <section className="sidebar">
+        {stage === 1 ?
+          (<div> 
+            <SidebarWithSelectors />
+          </div>) : 
+          (<div>
+            <SidebarCompleted />
+          </div>)
+        }
       </section>
-      <section className="sidebar-last-container">
-        <LastTickets />
+
+      <section className="sidebar-lasttickets-container">
+        {stage === 1 && <LastTickets />}
       </section>
     </aside>
   )

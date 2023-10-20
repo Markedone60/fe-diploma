@@ -1,9 +1,9 @@
 import React from "react";
 import '../OrderPage.css';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
-import DirectionInputs from "../../../Inputs/DirectionInputs";
-import DateInputs from "../../../Inputs/DateInputs";
+import DirectionInputs from "../../../SearchInputs/DirectionInputs";
+import DateInputs from "../../../SearchInputs/DateInputs";
 import { fetchRoutes } from "../../../../slices/routeSlice";
 
 export default function SearchOrder() {

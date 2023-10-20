@@ -1,7 +1,7 @@
 import React from "react";
-import "../Sidebar.css";
+import "./SidebarCompleted.css";
 
-export default function Completed() {
+export default function SidebarCompleted() {
 
   return (
     <section className="completed">
