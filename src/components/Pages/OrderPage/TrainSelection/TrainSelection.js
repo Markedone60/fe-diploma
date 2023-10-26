@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { nanoid } from "nanoid";
 import { useDispatch, useSelector } from "react-redux";
 import '../OrderPage.css';
-import TrainElement from "./TrainElement";
+import TrainElement from "./TrainElement/TrainElement";
 import PageChanger from "../../../Elements/PageChanger";
 
 import { stageChange } from "../../../../slices/stageSlice";

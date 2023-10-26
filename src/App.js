@@ -11,7 +11,7 @@ function App() {
     <Routes>
       <Route path='/' Component={FirstPage} />
       <Route path='/order/*' Component={OrderPage} />
-      <Route path='/success/*' Component={SuccessPage} />
+      <Route path='/success/' Component={SuccessPage} />
     </Routes>
   )
 }

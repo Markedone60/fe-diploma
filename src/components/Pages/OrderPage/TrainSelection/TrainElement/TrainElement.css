@@ -1,0 +1,187 @@
+
+.train-container-card {
+  background-color: #fff;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+  display: flex;
+  margin-bottom: 50px;
+  min-height: 250px;
+  min-width: 950px;
+}
+
+.train-card:nth-child(n + 2) {
+  margin-top: 47px;
+}
+
+.card-logo {
+  align-items: center;
+  background-color: #e4e0e9;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 18px 24px;
+  width: 20%;
+}
+
+.card-logo-img {
+  margin-bottom: 17px;
+  margin-top: 15%;
+}
+
+.card-logo-body {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-logo-body-header {
+  align-self: center;
+  color: #3e3c41;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.card-direction {
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.train_routes {
+  padding: 54px 39px;
+  width: 50%;
+}
+
+.card-body-section {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 40px;
+}
+
+.card-body-between {
+  padding: 0 20px;
+}
+
+.card-direction-time {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 0;
+}
+
+.card-duration-time {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #c4c4c4;
+}
+
+
+.card-direction-station, .card-direction-city  {
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 19px;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.card-direction-station {
+  color: #928f94;
+  font-size: 16px;
+}
+
+.card-places-list {
+  width: 100%;
+}
+
+
+.train_info {
+  align-items: flex-end;
+  border-left: 1px dashed #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 20px 20px;
+  width: 30%;
+}
+
+.card-places-list-item {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-places-list-item-type {
+  color: #3e3c41;
+  font-size: 16px;
+  line-height: 19px;
+  width: 74px;
+}
+
+.card-places-list-item-quantity {
+  color: #ffa800;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.card-places-list-item-price {
+  color: #928f94;
+  font-size: 16px;
+  line-height: 19px;
+  margin-left: 10px;
+  padding-right: 5px;
+  display: flex;
+  align-items: baseline;
+}
+
+.list-item-price-span2-value {
+  color: #2d2b2f;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.list-item-price-img {
+  height: 19px;
+  width: 16px;
+}
+
+.card-places-button {
+  background: #ffa800;
+  border: 1px solid #ffa800;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  padding: 6px 20px;
+  text-align: center;
+}
+
+.card-places-button:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-places-button:active {
+  color: #ffa800;
+  border: 1px solid #ffa800;
+  background-color: #e5e5e5;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.route-duration-time {
+  margin: 0 30px 10px 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #c4c4c4;
+}

@@ -23,7 +23,7 @@ export default function LuxuryClass({ id, seatsList, typeTicket }) {
    ];
 
    return (
-       <div className="coach-seats-list coach-seats-list--lux">
+       <div className="coach-seats-list coach-seats-list-lux">
           {seats.map((el) => (
               <SeatSelector
                   id={id}

@@ -1,18 +1,39 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import PriceFormatter from "../../../Elements/PriceFormatter";
 import '../SuccessPage.css';
 
 export default function SuccessForm() {
+  const navigate = useNavigate();
+
+  const { passengersPrice } = useSelector((state) => state.passengers);
+  const { payer } = useSelector((state) => state.pay);
+
+  const handleClick = () => {
+    navigate('/');
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <div className="successform-wraper">
       <section className="successform">
         <article className="successform-header">
           <h2 className="successform-header-order">№123</h2>
           <div className="successform-header-sum">
-            <h1 className="sum-text">сумма</h1>
-            <div className="sum-numbers">
-              <span className="sum-numbers-text">1000</span>
-              <img className="sum-numbers-img" src={require('../../../../../src/images/sidebar/sidebar-last-rub.png')} alt="logo" />
-            </div>
+            сумма {''}
+            <PriceFormatter
+              title="successOrder"
+              value={
+                passengersPrice.departure.child +
+                passengersPrice.departure.adult +
+                passengersPrice.departure.services +
+                passengersPrice.arrival.child +
+                passengersPrice.arrival.adult +
+                passengersPrice.arrival.services
+              }
+            />
+            <img className="sum-numbers-img" src={require('../../../../../src/images/sidebar/sidebar-last-rub.png')} alt="logo" />
           </div>
         </article>
 
@@ -32,7 +53,7 @@ export default function SuccessForm() {
         </article>
 
         <article className="successform-text">
-          <h2 className="successform-text-name">Имя Отчество</h2>
+          <h2 className="successform-text-name">{payer.name} {payer.lastname}!</h2>
           <p className="successform-text-text">
             Ваш заказ успешно оформлен. <br />
             В ближайшее время с вами свяжется наш оператор для подтверждения.
@@ -50,7 +71,7 @@ export default function SuccessForm() {
             </div>
           </div>
           <div className="successform-footer-right">
-            <button className="change-button successform-button">Вернуться на главную</button>
+            <button type="button" className="change-button successform-button" onClick={handleClick}>Вернуться на главную</button>
           </div>
         </article>
       </section>

@@ -42,13 +42,17 @@ export default function Payment() {
   }, [form]);
 
   const handleChange = (event) => {
-    const {name, value} = event.target;
-    setForm((prev) => ({...prev, pay: event.target.id}));
+    const { name, value } = event.target;
+    setForm((prev) => ({ ...prev, [name]: value}));
+  }
+
+  const handleRadio = (event) => {
+    setForm((prev) => ({ ...prev, pay: event.target.id }));
   }
 
   const handleClick = (event) => {
     event.preventDefault();
-    dispatch(addPayerData({data: form}));
+    dispatch(addPayerData({ data: form }));
     navigate('/order/verification/');
     document.documentElement.scrollTop = 0;
   }
@@ -64,51 +68,68 @@ export default function Payment() {
           <form className="payment-form">
 
             <div className="payment-names">
-              <label className="payment-label">
+              <label className="payment-label" htmlFor="surname">
                 Фамилия
                 <input
                   className="payment-label-input"
-                  type="text"
+                  id="surname"
                   name="surname"
+                  type="text"
+                  value={form.surname}
+                  onChange={handleChange}
                 />
               </label>
-              <label className="payment-label">
+              <label className="payment-label" htmlFor="name">
                 Имя
                 <input
                   className="payment-label-input"
-                  type="text"
+                  id="name"
                   name="name"
+                  type="text"
+                  value={form.name}
+                  onChange={handleChange}
                 />
               </label>
-              <label className="payment-label">
+              <label className="payment-label" htmlFor="last-name">
                 Отчество
                 <input
                   className="payment-label-input"
-                  type="text"
+                  id="last-name"
                   name="lastname"
+                  type="text"
+                  value={form.lastname}
+                  onChange={handleChange}
                 />
               </label>
             </div>
           </form>
 
           <div className="payment-inputs">
-            <label className="payment-label">
+            <label className="payment-label" htmlFor="phone">
               <p className="payment-label-titles">Номер телефона</p>
               <input
                 className="payment-label-input input-data"
-                type="text"
-                name="telephone"
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="+7 ___ ___ __ __"
+                value={form.phone}
+                onChange={handleChange}
               />
             </label>
           </div>
 
           <div className="payment-inputs">
-            <label className="payment-label">
+            <label className="payment-label" htmlFor="email">
               <p className="payment-label-titles">E-mail</p>
               <input
                 className="payment-label-input input-data"
-                type="text"
-                name="mail"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="inbox@gmail.ru"
+                value={form.email}
+                onChange={handleChange}
               />
             </label>
           </div>
@@ -122,7 +143,14 @@ export default function Payment() {
 
         <div className="payment-options">
           <div className="payment-check">
-            <input className="payment-check-input" type="checkbox" />
+            <input
+              className="payment-check-input"
+              type="radio"
+              name="payment"
+              id="online"
+              checked={form.pay === 'online'}
+              onChange={handleRadio}
+            />
             <p className="payment-check-text">Онлайн</p>
           </div>
 
@@ -133,14 +161,28 @@ export default function Payment() {
           </div>
 
           <div className="payment-check">
-            <input className="payment-check-input" type="checkbox" />
+            <input
+              className="payment-check-input"
+              type="radio"
+              name="payment"
+              id="cash"
+              checked={form.pay === 'cash'}
+              onChange={handleRadio}
+            />
             <p className="payment-check-text">Наличными</p>
           </div>
         </div>
       </section>
 
       <div className="payment-nextpage">
-        <button className="payment-button">Далее</button>
+        <button
+          className="payment-button"
+          type="button"
+          onClick={handleClick}
+          disabled={disabled}
+        >
+          Купить билет
+        </button>
       </div>
 
     </div>

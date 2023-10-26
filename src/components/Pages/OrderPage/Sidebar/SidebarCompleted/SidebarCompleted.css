@@ -27,6 +27,21 @@
   bottom: -33px;
 }
 
+.completed-to {
+  position: relative;
+}
+
+.completed-to::after {
+  content: '';
+  position: absolute;
+  width: 364px;
+  height: 0;
+  border-bottom: 1px solid #e5e5e5;
+  right: -28px;
+  bottom: -33px;
+}
+
+
 .to-header {
   display: flex;
   align-items: center;
@@ -37,7 +52,7 @@
 .header-left {
   display: flex;
   align-items: baseline;
-  gap: 21px;
+  gap: 15px;
 }
 
 .header-left-img {
@@ -79,6 +94,13 @@
   justify-content: space-between;
 }
 
+.to-train-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+
 .to-timing-upper {
   display: flex;
   align-items: baseline;
@@ -107,7 +129,7 @@
   margin-bottom: 0;
 }
 
-.to-train-right-text {
+.price-passenger-value {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
@@ -125,6 +147,13 @@
 
 .to-train-right-header {
   color: #FFFFFF;
+}
+
+.to-train-right-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #E5E5E5;
 }
 
 .completed-price {
@@ -147,14 +176,6 @@
   color: #FFFFFF;
 }
 
-.price-right-title {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
-
-  color: #FFA800;
-}
-
 .price-right-img {
   padding-left: 10px;
 }
@@ -170,5 +191,12 @@
   margin-bottom: 3px;
   margin-left: auto;
   border: 2px solid #c4c4c4;
-  color: #C4C4C4;
+}
+
+.price-total-value {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+
+  color: #FFA800;
 }

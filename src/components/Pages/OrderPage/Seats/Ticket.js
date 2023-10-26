@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import PropTypes from 'prop-types';
+import { nanoid } from "@reduxjs/toolkit";
 
-import TrainElement from "../TrainSelection/TrainElement";
+import TrainElement from "../TrainSelection/TrainElement/TrainElement";
 import Coach from "./Coach";
 import { routeTo, routeBack, seat, plats, coupe, lux } from '../../../../images/svg'
 import { coachClassChange, coachItemsClear, coachItemsSelect, coachItemsUnSelect } from "../../../../slices/seatsSlice";
@@ -80,7 +81,7 @@ export default function Ticket({ type }) {
     <section className="seat">
       <section className="seat-container">
 
-        <div className={`ticket_header-actions ${type === 'departure' ? '' : 'routeBack'}`}>
+        <div className={`seat-header-actions ${type === 'departure' ? '' : 'routeBack'}`}>
           {type === 'departure' ? routeTo : routeBack}
           <button
             type="button"
@@ -91,7 +92,7 @@ export default function Ticket({ type }) {
           </button>
         </div>
 
-        <TrainElement train={train} type={type} option="ticket_header-train" />
+        <TrainElement key={nanoid()} train={train} type={type} option="ticket_header-train" />
       </section>
 
       <section className="seat-tickets">

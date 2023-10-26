@@ -69,7 +69,7 @@ export default function SittingClass({ id, seatsList, typeTicket }) {
   ];
 
   return (
-    <div className="coach-seats-list coach-seats-list--seat">
+    <div className="coach-seats-list coach-seats-list-seat">
       {seats.map((el) => (
         <SeatSelector
           id={id}

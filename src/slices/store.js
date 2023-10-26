@@ -7,6 +7,7 @@ import stageSlice from "./stageSlice";
 import seatsSlice from "./seatsSlice";
 import passengersSlice from "./passengersSlice";
 import paySlice from "./paySlice";
+import orderSlice from "./orderSlice";
 
 export default configureStore({
   reducer: {
@@ -17,5 +18,6 @@ export default configureStore({
     seats: seatsSlice,
     passengers: passengersSlice,
     pay: paySlice,
+    order: orderSlice,
   }
 })
