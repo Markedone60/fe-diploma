@@ -1,4 +1,4 @@
-https://markedone60.github.io/fe-diploma/
+https://markedone60.github.io/
 
 ### FE Diploma work progress:
 ## Step 1
