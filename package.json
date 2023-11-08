@@ -1,7 +1,6 @@
 {
   "name": "fe-diploma",
   "version": "0.1.0",
-  "homepage": "https://markedone60.github.io/fe-diploma/index.html",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
